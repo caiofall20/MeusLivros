@@ -11,15 +11,15 @@ import javax.persistence.Id;
 public class Book implements Serializable {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long id;
+private Integer id;
 private String title;
 private String gender;
 private String publishy_company;
 private String author;
-public Long getId() {
+public Integer getId() {
 	return id;
 }
-public void setId(Long id) {
+public void setId(Integer id) {
 	this.id = id;
 }
 public String getTitle() {
@@ -47,6 +47,16 @@ public void setAuthor(String author) {
 	this.author = author;
 }
 public Book() {
+}
+
+public Book(Integer id, String title, String gender, String publishy_company, String author) {
+	super();
+	this.id = id;
+	this.title = title;
+	this.gender = gender;
+	this.publishy_company = publishy_company;
+	this.author = author;
+	
 }
 
 @Override
@@ -77,4 +87,4 @@ public boolean equals(Object obj) {
 
 }
 
-}
+
