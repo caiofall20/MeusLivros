@@ -1,4 +1,4 @@
-package models;
+package br.com.caio.livros.models;
 
 import java.io.Serializable;
 
@@ -9,47 +9,63 @@ import javax.persistence.Id;
 
 @Entity
 public class Book implements Serializable {
+	private static final long serialVersionUID = 1L;
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
-private Integer id;
+private Long id;
 private String title;
 private String gender;
-private String publishy_company;
-private String author;
-public Integer getId() {
-	return id;
-}
-public void setId(Integer id) {
-	this.id = id;
-}
-public String getTitle() {
-	return title;
-}
-public void setTitle(String title) {
-	this.title = title;
-}
-public String getGender() {
-	return gender;
-}
-public void setGender(String gender) {
-	this.gender = gender;
-}
-public String getPublishy_company() {
-	return publishy_company;
-}
-public void setPublishy_company(String publishy_company) {
-	this.publishy_company = publishy_company;
-}
-public String getAuthor() {
-	return author;
-}
-public void setAuthor(String author) {
-	this.author = author;
-}
-public Book() {
-}
 
-public Book(Integer id, String title, String gender, String publishy_company, String author) {
+	public static long getSerialVersionUID() {
+		return serialVersionUID;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getPublishy_company() {
+		return publishy_company;
+	}
+
+	public void setPublishy_company(String publishy_company) {
+		this.publishy_company = publishy_company;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	private String publishy_company;
+private String author;
+
+
+
+public Book(Long id, String title, String gender, String publishy_company, String author) {
 	super();
 	this.id = id;
 	this.title = title;
@@ -57,6 +73,10 @@ public Book(Integer id, String title, String gender, String publishy_company, St
 	this.publishy_company = publishy_company;
 	this.author = author;
 	
+}
+
+public Book() {
+
 }
 
 @Override
