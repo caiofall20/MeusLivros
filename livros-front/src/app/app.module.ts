@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { LoansComponent } from './loans/loans.component';
-import { BooksComponent } from './books/books.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './pages/header/header.component';
+import { BooksComponent } from './pages/books/books.component';
+import { LoansComponent } from './pages/loans/loans.component';
+import { HomeComponent } from './pages/home/home.component';
+
 
 @NgModule({
   declarations: [
