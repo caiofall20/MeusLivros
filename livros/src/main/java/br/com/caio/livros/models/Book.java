@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+// Nesta classe de modelo é onde serão descritos os atributos do objeto Livro.
 @Entity
 public class Book implements Serializable {
 	private static final long serialVersionUID = 1L;

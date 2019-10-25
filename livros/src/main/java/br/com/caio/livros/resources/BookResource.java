@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-
+// Classe onde é implementado as requisições que serão feitas ao back.
 @RestController
 @RequestMapping(value = "/livros")
 public class BookResource {

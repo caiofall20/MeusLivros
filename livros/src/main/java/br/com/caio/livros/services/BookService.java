@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 import br.com.caio.livros.repositories.BookRepository;
 
+// Classe onde é implementado o CRUD da aplicação.
 @Service
 public class BookService {
 
