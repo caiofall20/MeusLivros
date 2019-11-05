@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { LoansComponent } from './loans/loans.component';
 import { BooksComponent } from './books/books.component';
 import { HeaderComponent } from './header/header.component';
+import {SlideMenuModule} from 'primeng/slidemenu';
+import {MenuItem} from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,10 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlideMenuModule,
+
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
