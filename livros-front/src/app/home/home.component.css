@@ -1,11 +1,27 @@
 section {
     font-family: 'Gotham-Medium';
-    margin: 60px 220px;
 }
 
-.example-card {
-    max-width: 400px;
-  }
+.content {
+    margin: 50px 50px;
+}
+
+.card {
+    max-width: 350px;
+    border: 1px solid white;
+}
+
+#card-1 {
+    background: linear-gradient(-206deg, #7accce 5%, #182848 100%);
+}
+
+#card-2 {
+    background: linear-gradient(240deg, #ff7295 0%, #fe875d 100%);
+}
+
+#card-3 {
+    background: linear-gradient(240deg, #00aadf 0%, #0071bc 100%)
+}
   
 .example-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');

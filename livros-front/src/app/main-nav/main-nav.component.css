@@ -7,10 +7,22 @@
 }
 
 .sidenav .mat-toolbar {
-  background: #7accce;
+  background: #182848;
   color: white;
   border:none!important;
 }
+
+.menu-a {
+  padding: 5%;
+}
+
+/* .sidenav {
+  top: 63px!important;
+}
+
+.mat-drawer-content {
+  margin-left: 0%!important;
+} */
 
 .mat-toolbar.mat-primary {
   position: sticky;
@@ -19,14 +31,15 @@
 }
 
 .header {
-  background: -moz-linear-gradient(-206deg, #7accce 5%, #182848 100%);
-  background: -webkit-linear-gradient(-206deg, #7accce 5%, #182848 100%);
-  background: linear-gradient(-206deg, #7accce 5%, #182848 100%);
-  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#4b6cb7", endColorstr="#182848",GradientType=1 ); */
+  background-color:#182848;
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: baseline; */
 }
 
 #header #logo-header {
-  width: 4rem;
-  padding: 5px;
+  height: 60px;
+    padding: 6%;
+
 
 }
