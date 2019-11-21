@@ -1,0 +1,29 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Meus Livros</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item href="#" class="active"><i class="fas fa-bookmark"></i> Início</a>
+      <a mat-list-item href="#"><i class="fas fa-journal-whills"></i> Meus Livros</a>
+      <a mat-list-item href="#"><i class="fas fa-book-reader"></i> Empréstimos</a>
+      <a mat-list-item href="#"><i class="fas fa-book-medical"></i>Adicionar Livro</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar id = "header" class="header">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span><a href="#"><img id="logo-header" alt="logo" src="assets/images/library (1).svg"></a></span>
+    </mat-toolbar>
+    <ng-content></ng-content>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

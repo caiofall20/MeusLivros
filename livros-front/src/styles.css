@@ -3,6 +3,7 @@
 html, body {
     margin: 0%;
     padding:  0%;
+    height: 100%;
     font-family: 'Gotham Book';
 }
 
@@ -15,3 +16,5 @@ html, body {
     font-family: 'Gotham-Medium';
     src: url(../../../MeusLivros/livros-front/src/assets/fonts/Gotham-Medium.ttf);
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

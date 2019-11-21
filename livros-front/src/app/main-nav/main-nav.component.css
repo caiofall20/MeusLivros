@@ -1,0 +1,32 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: #7accce;
+  color: white;
+  border:none!important;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header {
+  background: -moz-linear-gradient(-206deg, #7accce 5%, #182848 100%);
+  background: -webkit-linear-gradient(-206deg, #7accce 5%, #182848 100%);
+  background: linear-gradient(-206deg, #7accce 5%, #182848 100%);
+  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#4b6cb7", endColorstr="#182848",GradientType=1 ); */
+}
+
+#header #logo-header {
+  width: 4rem;
+  padding: 5px;
+
+}

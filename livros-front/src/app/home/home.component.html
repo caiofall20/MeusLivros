@@ -1,64 +1,22 @@
-<app-header></app-header>
-<!-- <section>
-
-  <div id="large-btn">
-    <a routerLink="meuslivros">
-      <div id="first-btn" class="btn">
-        Meus Livros
-        <img class="book" src="assets/images/logo-book .png" alt="livros">
-      </div>
-    </a>
-    <a routerLink="emprestimo">
-      <div id="second-btn" class="btn">
-        Empréstimos
-        <img class="loan" src="assets/images/icon-loan.png" alt="livros">
-      </div>
-    </a>
-  </div>
-
-  <div id="small-btn">
-    <div id="total-btn" class="btn">
-      Total Livros
-      <img class="book" src="assets/images/logo-book .png" alt="livros">
-    </div>
-    <div id="ebook-btn" class="btn">
-      Ebooks
-      <img class="loan" src="assets/images/icon-loan.png" alt="livros">
-    </div>
-    <div id="loans-btn" class="btn">
-      Empréstimos
-      <img class="loan" src="assets/images/icon-loan.png" alt="livros">
-    </div>
-  </div>
-
-  <div id="reading">
-    <table id="table">
-      <tr>
-        <th>Lendo Agora</th>
-      </tr>
-      <tr>
-        <td>oi{{book}}</td>
-      </tr>
-    </table>
-  </div>
-
-  <div>
-    <div id="recents">
-      <table id="table-recents" class="table table-striped">
-        <tr>
-          <th>Adicionados Recentemente</th>
-        </tr>
-        <tr>
-          <td>oi{{book}}</td>
-        </tr>
-        <tr>
-          <td>oi{{book}}</td>
-        </tr>
-      </table>
-    </div>
-    <div id="graphic">
-
-    </div>
-
-  </div>
-</section> -->
+<app-main-nav>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  <app-footer></app-footer>
+</app-main-nav>

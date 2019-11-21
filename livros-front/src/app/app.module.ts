@@ -6,9 +6,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoansComponent } from './loans/loans.component';
 import { BooksComponent } from './books/books.component';
-import { HeaderComponent } from './header/header.component';
 import {SlideMenuModule} from 'primeng/slidemenu';
-import {MenuItem} from 'primeng/api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule } from '@angular/material';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { AddBookComponent } from './add-book/add-book.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +20,22 @@ import {MenuItem} from 'primeng/api';
     HomeComponent,
     LoansComponent,
     BooksComponent,
-    HeaderComponent
+    MainNavComponent,
+    AddBookComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SlideMenuModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule
 
     
   ],
