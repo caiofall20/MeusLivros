@@ -7,7 +7,7 @@ section {
 }
 
 .card {
-    max-width: 350px;
+    /* width: 350px; */
     border: 1px solid white;
 }
 
@@ -27,3 +27,22 @@ section {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
 }
+
+.number {
+    font-weight: bolder;
+    font-size: 40px;
+    position: relative;
+    left: 6%;
+}
+
+.card-header {
+    color: white;
+    background: #182848;
+}
+
+mat-card-title {
+    text-transform: uppercase;
+}
+
+
+
