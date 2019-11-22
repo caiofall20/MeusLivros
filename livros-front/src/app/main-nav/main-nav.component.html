@@ -5,10 +5,10 @@
       [opened]="!(isHandset$ | async)">
     <mat-toolbar>Meus Livros</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#"><i class="fas fa-bookmark"></i><p class="menu-a">Início</p></a>
-      <a mat-list-item href="#"><i class="fas fa-journal-whills"></i><p class="menu-a"> Meus Livros</p></a>
-      <a mat-list-item href="#"><i class="fas fa-book-reader"></i><p class="menu-a"> Empréstimos</p></a>
-      <a mat-list-item href="/adicionarlivros"><i class="fas fa-book-medical"></i><p class="menu-a">Adicionar Livro</p></a>
+      <a mat-list-item routerLink = ""><i class="fas fa-bookmark"></i><p class="menu-a">Início</p></a>
+      <a mat-list-item routerLink = "/meuslivros"><i class="fas fa-journal-whills"></i><p class="menu-a"> Meus Livros</p></a>
+      <a mat-list-item routerLink = "/emprestimo"><i class="fas fa-book-reader"></i><p class="menu-a"> Empréstimos</p></a>
+      <a mat-list-item routerLink = "/adicionarlivros"><i class="fas fa-book-medical"></i><p class="menu-a">Adicionar Livro</p></a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

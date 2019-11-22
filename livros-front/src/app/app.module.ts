@@ -8,7 +8,7 @@ import { LoansComponent } from './loans/loans.component';
 import { BooksComponent } from './books/books.component';
 import {SlideMenuModule} from 'primeng/slidemenu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, MatFormFieldModule } from '@angular/material';
+import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { AddBookComponent } from './add-book/add-book.component';
@@ -36,6 +36,8 @@ import { FooterComponent } from './footer/footer.component';
     MatIconModule,
     MatListModule,
     MatCardModule,
+    MatFormFieldModule,
+    MatInputModule
 
     
   ],
