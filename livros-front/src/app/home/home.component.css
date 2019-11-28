@@ -40,6 +40,10 @@ section {
     background: #182848;
 }
 
+.box {
+    margin: 40px 0px;
+}
+
 mat-card-title {
     text-transform: uppercase;
 }
