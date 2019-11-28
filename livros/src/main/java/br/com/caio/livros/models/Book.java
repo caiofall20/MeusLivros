@@ -21,6 +21,15 @@ private String type;
 private String summary;
 private Date publication_date;
 private String number_pages;
+private Boolean status;
+
+	public Boolean getStatus() {
+		return status;
+	}
+
+	public void setStatus(Boolean status) {
+		this.status = status;
+	}
 
 	public String getIsbn() {
 		return isbn;
@@ -111,7 +120,7 @@ private String author;
 
 
 
-public Book(Long id, String title, String gender, String publishy_company, String author, String isbn, String type, String summary, Date publication_date, String number_pages ) {
+public Book(Long id, String title, String gender, String publishy_company, String author, String isbn, String type, String summary, Date publication_date, String number_pages, Boolean status ) {
 	super();
 	this.id = id;
 	this.title = title;
@@ -123,6 +132,7 @@ public Book(Long id, String title, String gender, String publishy_company, Strin
 	this.summary = summary;
 	this.publication_date = publication_date;
 	this.number_pages = number_pages;
+	this.status = status;
 	
 }
 
