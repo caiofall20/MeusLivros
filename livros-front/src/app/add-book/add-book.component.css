@@ -1,0 +1,38 @@
+
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.example-form {
+    min-width: 400px;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+}
+
+.btn-cadastrar {
+    background-color: #182848 
+}
+.fas {
+    color: white;
+}
+
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple{
+    background-color: #182848 !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #182848 !important;
+}

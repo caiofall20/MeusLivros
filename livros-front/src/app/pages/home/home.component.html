@@ -1,64 +1,55 @@
-<app-header></app-header>
-  <section>
-  
-    <div id="large-btn">
-      <a routerLink = "meuslivros">
-        <div id="first-btn" class="btn">
-          Meus Livros
-          <img class="book" src="assets/images/logo-book .png" alt="livros">
-        </div>
-      </a>
-      <a  routerLink = "emprestimo">
-        <div id="second-btn" class="btn">
-          Empréstimos
-          <img class="loan" src="assets/images/icon-loan.png" alt="livros">
-        </div>
-      </a>
+<div class="content">
+  <div class="row">
+    <div class="col-md-4 col-sm-12">
+      <mat-card id="card-1" class="card">
+        <mat-card-header>
+          <mat-card-title>Livros</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="number">
+            210
+          </p>
+          <mat-card-subtitle><small>Total de livros cadastrados</small></mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
     </div>
-  
-    <div id="small-btn">
-      <div id="total-btn" class="btn">
-        Total Livros
-        <!-- <img class="book" src="assets/images/logo-book .png" alt="livros"> -->
+    <div class="col-md-4 col-sm-12">
+      <mat-card id="card-2" class="card">
+        <mat-card-header>
+          <mat-card-title>Ebooks</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="number">
+            10
+          </p>
+          <mat-card-subtitle><small>Total de Ebooks cadastrados</small></mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col-md-4 col-sm-12">
+      <mat-card id="card-3" class="card">
+        <mat-card-header>
+          <mat-card-title>Empréstimos</mat-card-title>
+
+        </mat-card-header>
+        <mat-card-content>
+          <p class="number">
+            2
+          </p>
+          <mat-card-subtitle><small>Total de empréstimos</small></mat-card-subtitle>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="box">
+    <div class="card">
+      <div class="card-header">
+        Lendo Agora
       </div>
-      <div id="ebook-btn" class="btn">
-        Ebooks
-        <!-- <img class="loan" src="assets/images/icon-loan.png" alt="livros"> -->
-      </div>
-      <div id="loans-btn" class="btn">
-        Empréstimos
-        <!-- <img class="loan" src="assets/images/icon-loan.png" alt="livros"> -->
+      <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
       </div>
     </div>
-  
-    <div id="reading">
-      <table id="table">
-        <tr>
-          <th>Lendo Agora</th>
-        </tr>
-        <tr>
-          <td>oi{{book}}</td>
-        </tr>
-      </table>
-    </div>
-  
-    <div>
-      <div id="recents">
-        <table id="table-recents"  class="table table-striped" >
-          <tr>
-            <th>Adicionados Recentemente</th>
-          </tr>
-          <tr>
-            <td>oi{{book}}</td>
-          </tr>
-          <tr>
-            <td>oi{{book}}</td>
-          </tr>
-        </table>
-      </div>
-      <div id="graphic">
-  
-      </div>
-  
-    </div>
-  </section>
+  </div>
+</div>
