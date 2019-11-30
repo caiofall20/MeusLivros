@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-book.component.css']
 })
 export class AddBookComponent implements OnInit {
+  color = 'accent';
+  checked = false;
+  disabled = false;
+  titulo;
 
   constructor() { }
 

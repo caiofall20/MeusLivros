@@ -1,9 +1,11 @@
 .sidenav-container {
   height: 100%;
+
 }
 
 .sidenav {
   width: 200px;
+  border: none!important;
 }
 
 .sidenav .mat-toolbar {
@@ -12,19 +14,14 @@
   border:none!important;
 }
 
+span {
+  padding: 2%;
+}
+
 .menu-a {
   padding: 5%;
   margin: 1%;
 }
-
-
-/* .sidenav {
-  top: 63px!important;
-}
-
-.mat-drawer-content {
-  margin-left: 0%!important;
-} */
 
 .mat-toolbar.mat-primary {
   position: sticky;
@@ -39,9 +36,11 @@
   align-items: baseline; */
 }
 
-#header #logo-header {
-  height: 60px;
-    padding: 6%;
+#logo-header {
+  height: 50px;
+  padding: 6%;
+}
 
-
+#logout {
+  color: #db1515;
 }

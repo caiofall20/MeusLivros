@@ -1,4 +1,7 @@
-<p>Adicionar Livro</p>
+<div class="title-box">
+    <p>Adicionar Livro</p>
+</div>
+
 
 <div class="content">
     <form class="example-form">
@@ -6,14 +9,14 @@
             <tr>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Título">
+                        <input matInput placeholder="Título" required>
                     </mat-form-field>
                 </td>
             </tr>
             <tr>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Autor">
+                        <input matInput placeholder="Autor" required>
                     </mat-form-field>
                 </td>
             </tr>
@@ -24,14 +27,55 @@
                     </mat-form-field>
                 </td>
             </tr>
+        </table>
+        <div class="example-container">
+            <mat-form-field>
+                <mat-select>
+                    <mat-option value="option">Romance</mat-option>
+                    <mat-option value="option">Aventura</mat-option>
+                    <mat-option value="option">Ficção Científica</mat-option>
+                    <mat-option value="option">Terror</mat-option>
+                </mat-select>
+                <mat-label>
+                    <mat-icon>bookmark</mat-icon> <b> Gênero</b>
+                </mat-label>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-select required>
+                    <mat-option value="option">Físico</mat-option>
+                    <mat-option value="option">E-book</mat-option>
+                </mat-select>
+                <mat-label>
+                    <mat-icon>book</mat-icon> <b>Tipo</b>
+                </mat-label>
+            </mat-form-field>
+
+
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Número de Páginas">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="ISBN">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked" [disabled]="disabled">
+                        Lendo agora
+                    </mat-slide-toggle>
+                </td>
+            </tr>
 
         </table>
-
-       
-
     </form>
     <div class="btns">
-        <button mat-raised-button class="btn-cadastrar"><i class="fas fa-plus"></i></button>
-        <button mat-raised-button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+        <button mat-raised-button class="btn btn-cadastrar" title="Adicionar"><i class="fas fa-plus"></i></button>
+        <button mat-raised-button class="btn btn btn-danger" title="Limpar"><i class="fas fa-trash-alt"></i></button>
     </div>
 </div>

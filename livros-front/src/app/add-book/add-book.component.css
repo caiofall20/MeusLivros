@@ -22,9 +22,42 @@
     padding-right: 8px;
 }
 
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+
 .btn-cadastrar {
     background-color: #182848 
 }
+
+.btns {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    margin: 1%;
+}
+
+.title-box {
+    clip-path: polygon( 0% 0%, 100% 0%, 100% 20%, 98% 100%, 0% 100% );
+    background-color: #efefef;
+}
+
+.title-box p {
+    padding: 0.5%;
+    font-weight: bold;
+    color: #2d2d2d;
+}
+
+
 .fas {
     color: white;
 }
