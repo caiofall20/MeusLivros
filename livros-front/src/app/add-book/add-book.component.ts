@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-add-book',
@@ -11,9 +12,21 @@ export class AddBookComponent implements OnInit {
   disabled = false;
   titulo;
 
+  form: FormGroup;
+
   constructor() { }
 
   ngOnInit() {
+
+      // this.form = this.formBuilder.group({
+      //   title: [null],
+      //   author: [null],
+      //   publishing_company:[null],
+      //   pages: [null],
+      //   isbn: [null],
+
+      // })
+    
   }
 
 }
