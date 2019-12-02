@@ -18,10 +18,15 @@
 }
 
 
+.img-thumbnail {
+    width: 70%;
+}
+
+
 
 .container {
     padding: 4rem 0rem;
-    max-width: 800px;
+    max-width: 950px;
   }
   
   h4 {

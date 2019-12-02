@@ -14,6 +14,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { AddBookComponent } from './add-book/add-book.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,8 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     SlideMenuModule,
     BrowserAnimationsModule,
     MatButtonModule,

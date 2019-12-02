@@ -29,6 +29,14 @@ span {
   z-index: 1;
 }
 
+.mat-sidenav-content {
+  background-color: #fafafa!important;
+}
+
+.mat-icon {
+  color: white;
+}
+
 .header {
   background-color:#182848;
   /* display: flex;
