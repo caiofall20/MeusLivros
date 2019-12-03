@@ -1,83 +1,95 @@
-.container{
-    height: 100%;
-    align-content: center;
-    }
-    
-    .card{
-    height: 370px;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 400px;
-    background-color: rgba(0,0,0,0.5) !important;
-    }
-    
-    .social_icon span{
-    font-size: 60px;
-    margin-left: 10px;
-    color: #182848;
-    }
-    
-    
-    .card-header h3{
-    color: white;
-    }
-    
-    .social_icon{
-    position: absolute;
-    right: 20px;
-    top: -45px;
-    }
 
-    .card-body {
-        margin-top: 10%;
-    }
-    
-    .input-group-prepend span{
-    width: 50px;
-    background-color: #182848;
-    color: white;
-    border:0 !important;
-    }
-    
-    input:focus{
-    outline: 0 0 0 0  !important;
-    box-shadow: 0 0 0 0 !important;
-    
-    }
-    
-    .h-100 {
-        height: 80%!important;
-    }
+    .container{
+        max-width: 100%;
+        height: 100%;
+        align-content: center;
+        background: #182848;
+        }
+        
+        .card{
+            height: 400px;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 450px;
+            background-color: rgba(0,0,0,0.5) !important;
+        }
+        
+        .fas {
+            color: #182848;
+        }
 
-    .remember{
-    color: white;
-    }
+        .fa-book-reader {
+            color: #efefef;
+        }
+        
+        .social_icon span{
+            font-size: 60px;
+            margin-left: 10px;
+            color: #182848;
+        }
+        
+        
+        .card-header h3{
+            color: white;
+        }
+        
+        .social_icon{
+        position: absolute;
+        right: 20px;
+        top: -45px;
+        }
+        
     
-    .remember input
-    {
-    width: 20px;
-    height: 20px;
-    margin-left: 15px;
-    margin-right: 5px;
-    }
+        .card-body {
+            margin-top: 10%;
+        }
+        
+        .input-group-prepend span{
+            width: 50px;
+            background-color: #efefef;
+            color: white;
+            border: 0 !important;
+        }
+        
+        input:focus{
+        outline: 0 0 0 0  !important;
+        box-shadow: 0 0 0 0 !important;
+        
+        }
+        
+        .h-100 {
+            height: 80%!important;
+        }
     
-    .login_btn{
-    color: white;
-    background-color: #182848;
-    width: 150px;
-    border-radius: 12px;
-    }
-
+        .remember{
+        color: white;
+        }
+        
+        .remember input
+        {
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+        margin-right: 5px;
+        }
+        
+        .login_btn{
+            color: #182848;
+            background-color: #efefef;
+            width: 150px;
+            border-radius: 12px
+        }
     
-    .login_btn:hover{
-    color: black;
-    background-color: white;
-    }
-    
-    .links{
-    color: white;
-    }
-    
-    .links a{
-    margin-left: 4px;
-    }
+        
+        .login_btn:hover{
+        color: black;
+        background-color: white;
+        }
+        
+        .links{
+        color: white;
+        }
+        
+        .links a{
+        margin-left: 4px;
+        }
