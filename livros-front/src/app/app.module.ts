@@ -8,7 +8,7 @@ import { LoansComponent } from './loans/loans.component';
 import { BooksComponent } from './books/books.component';
 import {SlideMenuModule} from 'primeng/slidemenu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatSlideToggleModule, MatSelectModule } from '@angular/material';
+import { MatButtonModule, MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, MatFormFieldModule, MatInputModule, MatSlideToggleModule, MatSelectModule, MatTooltipModule, MatDialogModule } from '@angular/material';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { AddBookComponent } from './add-book/add-book.component';
@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AuthService } from 'src/app/shared/services/auth.service';
+import { ViewDialogComponent } from './view-dialog/view-dialog.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AuthService } from 'src/app/shared/services/auth.service';
     MainNavComponent,
     AddBookComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    ViewDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -46,11 +48,15 @@ import { AuthService } from 'src/app/shared/services/auth.service';
     MatInputModule,
     MatSlideToggleModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTooltipModule,
+    MatDialogModule
 
     
   ],
+  entryComponents: [ViewDialogComponent],
   providers: [AuthService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }

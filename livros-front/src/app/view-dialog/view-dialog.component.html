@@ -1,0 +1,31 @@
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLongTitle">Título do livro</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="close()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div>
+    <img src="assets/images/image-not-available.jpg" class="img-fluid img-thumbnail" alt="Imagem indisponível">
+  </div>
+  <div class="table-responsive" id="dados-conteudo">
+    <table class="table table-sm table-striped" *ngIf="ocorrencia">
+      <thead>
+        <tr>
+          <td><b>Título</b></td>
+          <td>{{ ocorrencia?.protocolo }}</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Nome</b></td>
+          <td>oi</td>
+        </tr>
+        <tr>
+          <td><b>Data de Abertura</b></td>
+          <td>ei</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
