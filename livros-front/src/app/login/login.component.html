@@ -13,21 +13,22 @@
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fas fa-user"></i></span>
             </div>
-            <input type="text" class="form-control" placeholder="Usuário" >
+            <input type="text" class="form-control" [(ngModel)] = "user.name" placeholder="Usuário" name = "user.name">
 
           </div>
           <div class="input-group form-group">
             <div class="input-group-prepend">
               <span class="input-group-text"><i class="fas fa-key"></i></span>
             </div>
-            <input type="password" class="form-control" placeholder="Senha" >
+            <input type="password"  [(ngModel)] = "user.password" class="form-control" placeholder="Senha" name = "user.password" >
           </div>
           <div class="form-group">
-            <input type="submit" value="Login" class="btn float-right login_btn">
+            <input type="submit" value="Login" (click) = "Login()" class="btn float-right login_btn">
           </div>
         </form>
       </div>
     </div>
   </div>
 </div>
+<div class=”meiaLua”></div>
 <app-footer></app-footer>

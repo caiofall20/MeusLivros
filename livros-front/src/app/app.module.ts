@@ -15,6 +15,7 @@ import { AddBookComponent } from './add-book/add-book.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
     
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

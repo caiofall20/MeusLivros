@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
-import { Book } from '../books/shared/book.model';
+import { Book } from '../shared/models/book.model';
 
 
 @Component({
