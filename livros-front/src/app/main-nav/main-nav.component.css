@@ -6,6 +6,7 @@
 .sidenav {
   width: 200px;
   border: none!important;
+  background: #efefef;
 }
 
 .sidenav .mat-toolbar {

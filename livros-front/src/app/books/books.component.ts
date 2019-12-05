@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogConfig } from '@angular/material';
 import { ViewDialogComponent } from '../view-dialog/view-dialog.component';
+import { Book } from '../shared/models/book.model';
 
 @Component({
   selector: 'app-books',
@@ -8,6 +9,8 @@ import { ViewDialogComponent } from '../view-dialog/view-dialog.component';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
+
+  books: Array<any>;
 
   constructor(private dialog: MatDialog) {}
 

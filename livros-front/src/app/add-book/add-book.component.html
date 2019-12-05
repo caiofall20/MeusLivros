@@ -5,7 +5,7 @@
 
 
 <div class="content">
-    <form [formGroup]="formBook" (ngSubmit)="onSubmit()" class="example-form" >
+    <form [formGroup]="formBook" (ngSubmit)="onSubmit()" class="example-form" method="post" #frm = "ngForm">
         <table class="example-full-width" cellspacing="0">
             <tr>
                 <td>
@@ -32,10 +32,10 @@
         <div class="example-container">
             <mat-form-field>
                 <mat-select name = "gender" formControlName = "gender">
-                    <mat-option value="option">Romance</mat-option>
-                    <mat-option value="option">Aventura</mat-option>
-                    <mat-option value="option">Ficção Científica</mat-option>
-                    <mat-option value="option">Terror</mat-option>
+                    <mat-option value="romance">Romance</mat-option>
+                    <mat-option value="aventura">Aventura</mat-option>
+                    <mat-option value="ficcaoCientifica">Ficção Científica</mat-option>
+                    <mat-option value="terror">Terror</mat-option>
                 </mat-select>
                 <mat-label>
                     <mat-icon>bookmark</mat-icon> <b> Gênero</b>
@@ -44,8 +44,8 @@
 
             <mat-form-field>
                 <mat-select name = "type" formControlName = "type" required>
-                    <mat-option value="option">Físico</mat-option>
-                    <mat-option value="option">E-book</mat-option>
+                    <mat-option value="fisico">Físico</mat-option>
+                    <mat-option value="e-book">E-book</mat-option>
                 </mat-select>
                 <mat-label>
                     <mat-icon>library_books</mat-icon> <b>Tipo</b>
@@ -53,9 +53,9 @@
             </mat-form-field>
             <mat-form-field>
                 <mat-select name = "category" formControlName = "category">
-                    <mat-option value="option">Lido</mat-option>
-                    <mat-option value="option">Não lido</mat-option>
-                    <mat-option value="option">Abandonado</mat-option>
+                    <mat-option value="lido">Lido</mat-option>
+                    <mat-option value="naoLido">Não lido</mat-option>
+                    <mat-option value="abandonado">Abandonado</mat-option>
                 </mat-select>
                 <mat-label>
                     <mat-icon>book</mat-icon> <b> Categoria </b>
@@ -86,7 +86,7 @@
         </table>
     </form>
     <div class="btns">
-        <button type = "submit" mat-raised-button class="btn btn-cadastrar"  matTooltip="Adicionar" matTooltipPosition="left"><i class="fas fa-plus"></i></button>
+        <button type = "submit" (click)= "onSubmit()" mat-raised-button class="btn btn-cadastrar"  matTooltip="Adicionar" matTooltipPosition="left"><i class="fas fa-plus"></i></button>
         <button mat-raised-button class="btn btn btn-danger" matTooltip="Limpar" matTooltipPosition="right" (click) = "resetForm()"><i class="fas fa-trash-alt"></i></button>
     </div>
 </div>

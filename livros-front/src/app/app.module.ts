@@ -17,6 +17,7 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { ViewDialogComponent } from './view-dialog/view-dialog.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -50,10 +51,10 @@ import { ViewDialogComponent } from './view-dialog/view-dialog.component';
     MatIconModule,
     MatSelectModule,
     MatTooltipModule,
-    MatDialogModule
-
-    
+    MatDialogModule,
+    HttpClientModule
   ],
+  
   entryComponents: [ViewDialogComponent],
   providers: [AuthService],
   bootstrap: [AppComponent],

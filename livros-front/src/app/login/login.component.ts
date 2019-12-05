@@ -4,6 +4,7 @@ import { AuthService } from '../shared/services/auth.service';
 import { User } from '../shared/user';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -22,4 +23,5 @@ export class LoginComponent implements OnInit {
     console.log(this.user);
     this.authService.Login(this.user);
   }
+
 }

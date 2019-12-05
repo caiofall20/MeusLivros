@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError, flatMap } from 'rxjs/operators';
-import { Book } from 'src/app/shared/models/book.model';
+import { Book } from '../models/book.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LivrosService {
+export class BooksService {
 
-  private apiPath: string = "api/books"
+  private apiPath: string = "http://localhost:8080/livros";
 
   constructor(private http: HttpClient) { }
 
@@ -18,6 +18,10 @@ export class LivrosService {
       // catchError(this.handleError),
       // map(this.jsonDataToCategories)
     )
+  }
+
+  public list() {
+    return this.http.get<Array<any>>(this.apiPath);
   }
 
 
