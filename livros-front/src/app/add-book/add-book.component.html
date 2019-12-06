@@ -10,7 +10,8 @@
             <tr>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Título"  name = "title" formControlName = "title" required>
+                        <input matInput placeholder="Título"  name = "title" formControlName = "title"  
+                      required>
                     </mat-form-field>
                 </td>
             </tr>
@@ -24,7 +25,7 @@
             <tr>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Editora" name = "publish" formControlName = "publish">
+                        <input matInput placeholder="Editora" name = "publish" formControlName = "publish" >
                     </mat-form-field>
                 </td>
             </tr>
@@ -68,12 +69,12 @@
             <tr>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Número de Páginas" name = "pages" formControlName = "pages">
+                        <input matInput placeholder="Número de Páginas" name = "pages" formControlName = "pages" >
                     </mat-form-field>
                 </td>
                 <td>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="ISBN" name = "isbn" formControlName = "isbn">
+                        <input matInput placeholder="ISBN" name = "isbn" formControlName = "isbn" >
                     </mat-form-field>
                 </td>
                 <td>
@@ -86,7 +87,7 @@
         </table>
     </form>
     <div class="btns">
-        <button type = "submit" (click)= "onSubmit()" mat-raised-button class="btn btn-cadastrar"  matTooltip="Adicionar" matTooltipPosition="left"><i class="fas fa-plus"></i></button>
+        <button type="submit"  mat-raised-button class="btn btn-cadastrar"  matTooltip="Adicionar" (click) = "onSubmit()" matTooltipPosition="left"><i class="fas fa-plus"></i></button>
         <button mat-raised-button class="btn btn btn-danger" matTooltip="Limpar" matTooltipPosition="right" (click) = "resetForm()"><i class="fas fa-trash-alt"></i></button>
     </div>
 </div>

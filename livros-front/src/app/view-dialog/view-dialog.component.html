@@ -5,25 +5,61 @@
   </button>
 </div>
 <div class="modal-body">
-  <div>
+  <div class="image">
     <img src="assets/images/image-not-available.jpg" class="img-fluid img-thumbnail" alt="Imagem indisponível">
   </div>
-  <div id="dados-conteudo">
+  <div  id="dados-conteudo">
+      <!-- *ngIf="book" -->
     <table class="table table-sm table-striped table-responsive">
       <thead>
         <tr>
           <td><b>Título</b></td>
-          <td>oiwe</td>
+          <td>{{book.title}}</td>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><b>Nome</b></td>
-          <td>oi</td>
+          <td><b>Autor</b></td>
+          <td>{{book.author}}</td>
         </tr>
         <tr>
-          <td><b>Data de Abertura</b></td>
-          <td>ei</td>
+          <td><b>Gênero</b></td>
+          <td>{{book.gender}}</td>
+        </tr>
+        <tr>
+          <td><b>Editora</b></td>
+          <td>{{book.publish}}</td>
+        </tr>
+        <tr>
+          <td><b>Tipo</b></td>
+          <td>{{book.type}}</td>
+        </tr>
+        <tr>
+          <td><b>Categoria</b></td>
+          <td>{{book.category}}</td>
+        </tr>
+        <tr>
+          <td><b>Número de Páginas</b></td>
+          <td>{{book.pages}}</td>
+        </tr>
+        <tr>
+          <td><b>ISBN</b></td>
+          <td>{{book.isbn}}</td>
+        </tr>
+        <tr>
+          <td><b>Status</b></td>
+          <td>{{book.status}}</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="buttons">
+              <button mat-raised-button class=" btn-info" matTooltip="Editar" matTooltipPosition="right"><i
+                  class="fas fa-edit"></i></button>
+              <button mat-raised-button class=" btn-danger" matTooltip="Excluir" matTooltipPosition="right"
+                (click)="deleteBook(book.id)"><i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>

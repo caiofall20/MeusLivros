@@ -25,8 +25,8 @@
         <td>Ficcção</td>
         <td>
           <div class="buttons">
-            <button mat-raised-button class="btn " matTooltip="Visualizar" matTooltipPosition="right"><i
-                class="fas fa-search" (click)="openDialog()"></i></button>
+            <button mat-raised-button class="btn " matTooltip="Visualizar" matTooltipPosition="right" (click)="openDialog()"><i
+                class="fas fa-search" ></i></button>
             <button mat-raised-button class=" btn-info" matTooltip="Editar" matTooltipPosition="right"><i
                 class="fas fa-edit"></i></button>
             <button mat-raised-button class=" btn-danger" matTooltip="Excluir" matTooltipPosition="right"><i
@@ -35,26 +35,26 @@
           </div>
         </td>
       </tr>
-      <tr>
-        <th scope="row">2</th>
+      <!-- <tr *ngFor="let book of books | async">
+        <th scope="row">1</th>
         <td class="w-25">
           <img src="assets/images/image-not-available.jpg" class="img-fluid img-thumbnail" alt="Imagem indisponível">
         </td>
-        <td>Petrus Logus</td>
-        <td>Augusto Cury</td>
-        <td>Ficcção</td>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.gender}}</td>
         <td>
           <div class="buttons">
             <button mat-raised-button class="btn " matTooltip="Visualizar" matTooltipPosition="right"><i
                 class="fas fa-search" (click)="openDialog()"></i></button>
             <button mat-raised-button class=" btn-info" matTooltip="Editar" matTooltipPosition="right"><i
                 class="fas fa-edit"></i></button>
-            <button mat-raised-button class=" btn-danger" matTooltip="Excluir" matTooltipPosition="right"><i
-                class="fas fa-trash-alt"></i>
+            <button mat-raised-button class=" btn-danger" matTooltip="Excluir" matTooltipPosition="right"
+              (click)="deleteBook(book.id)"><i class="fas fa-trash-alt"></i>
             </button>
           </div>
         </td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>
   <app-footer></app-footer>
