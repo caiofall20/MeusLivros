@@ -25,9 +25,9 @@
         <td>Ficcção</td>
         <td>
           <div class="buttons">
-            <button mat-raised-button class="btn " matTooltip="Visualizar" matTooltipPosition="right" (click)="openDialog()"><i
+            <button mat-raised-button class="btn " matTooltip="Visualizar" matTooltipPosition="right" (click)="openDialog('dialog')"><i
                 class="fas fa-search" ></i></button>
-            <button mat-raised-button class=" btn-info" matTooltip="Editar" matTooltipPosition="right"><i
+            <button mat-raised-button class=" btn-info" matTooltip="Editar" matTooltipPosition="right"  (click)="openDialog('editDialog')"><i
                 class="fas fa-edit"></i></button>
             <button mat-raised-button class=" btn-danger" matTooltip="Excluir" matTooltipPosition="right"><i
                 class="fas fa-trash-alt"></i>

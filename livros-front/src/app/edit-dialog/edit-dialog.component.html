@@ -1,0 +1,95 @@
+<div class="modal-header">
+  <h5 class="modal-title" id="exampleModalLongTitle">Editar Livro - {{book.title}}</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="close()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="content">
+    <form [formGroup]="formBook" (ngSubmit)="onSubmit()" class="example-form" method="post" #frm = "ngForm">
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Título"  name = "title" formControlName = "title"  
+                      required>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Autor" name = "author"formControlName = "author" required>
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Editora" name = "publish" formControlName = "publish" >
+                    </mat-form-field>
+                </td>
+            </tr>
+        </table>
+        <div class="example-container">
+            <mat-form-field>
+                <mat-select name = "gender" formControlName = "gender">
+                    <mat-option value="romance">Romance</mat-option>
+                    <mat-option value="aventura">Aventura</mat-option>
+                    <mat-option value="ficcaoCientifica">Ficção Científica</mat-option>
+                    <mat-option value="terror">Terror</mat-option>
+                </mat-select>
+                <mat-label>
+                    <mat-icon>bookmark</mat-icon> <b> Gênero</b>
+                </mat-label>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-select name = "type" formControlName = "type" required>
+                    <mat-option value="fisico">Físico</mat-option>
+                    <mat-option value="e-book">E-book</mat-option>
+                </mat-select>
+                <mat-label>
+                    <mat-icon>library_books</mat-icon> <b>Tipo</b>
+                </mat-label>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-select name = "category" formControlName = "category">
+                    <mat-option value="lido">Lido</mat-option>
+                    <mat-option value="naoLido">Não lido</mat-option>
+                    <mat-option value="abandonado">Abandonado</mat-option>
+                </mat-select>
+                <mat-label>
+                    <mat-icon>book</mat-icon> <b> Categoria </b>
+                </mat-label>
+            </mat-form-field>
+
+
+        </div>
+        <table>
+            <tr>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Número de Páginas" name = "pages" formControlName = "pages" >
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="ISBN" name = "isbn" formControlName = "isbn" >
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-slide-toggle class="example-margin" [color]="color" [checked]="checked"  [attr.disabled]="true" name = "status" formControlName = "status">
+                        Lendo agora
+                    </mat-slide-toggle>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    <div class="btns">
+        <button type="submit"  mat-raised-button class="btn btn-cadastrar"  matTooltip="Adicionar" (click) = "onSubmit()" matTooltipPosition="left"><i class="fas fa-plus"></i></button>
+        <button mat-raised-button class="btn btn btn-danger" matTooltip="Limpar" matTooltipPosition="right" (click) = "resetForm()"><i class="fas fa-trash-alt"></i></button>
+    </div>
+</div>
+</div>

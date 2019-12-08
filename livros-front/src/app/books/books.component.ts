@@ -4,6 +4,7 @@ import { ViewDialogComponent } from '../view-dialog/view-dialog.component';
 import { Book } from '../shared/models/book.model';
 import { Observable } from "rxjs";
 import { BooksService } from "../shared/services/books.service";
+import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
 
 
 
@@ -17,19 +18,25 @@ export class BooksComponent implements OnInit {
 
   books: Observable<Book[]>;
 
-  // books: Array<any>;
+  constructor(private dialog: MatDialog,private editDialog: MatDialog,private bookService: BooksService) {}
 
-  constructor(private dialog: MatDialog, private bookService: BooksService) {}
-
-  openDialog() {
+  openDialog(modal: string) {
       const dialogConfig = new MatDialogConfig();
 
       dialogConfig.disableClose = true;
       dialogConfig.autoFocus = true;
-
-      this.dialog.open(ViewDialogComponent, dialogConfig);
-      console.log("Opa, to entrando na função!");
+      
+      if (modal == 'dialog') {
+        this.dialog.open(ViewDialogComponent, dialogConfig); 
+      }
+      else if (modal == 'editDialog')  {
+        this.dialog.open(EditDialogComponent, dialogConfig);
+    }
+    console.log("Opa, to entrando na função!");
+  
   }
+
+
 
   ngOnInit() {
     this.reloadData();

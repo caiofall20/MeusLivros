@@ -12,7 +12,7 @@ import { Book } from '../shared/models/book.model';
 })
 export class ViewDialogComponent implements OnInit {
 
-  @Input() book: Book;
+  @Input() books: Book;
 
   constructor(private dialogRef: MatDialogRef<ViewDialogComponent>) { }
 
