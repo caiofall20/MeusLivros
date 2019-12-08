@@ -15,9 +15,9 @@ import { BooksService } from "../shared/services/books.service";
 })
 export class BooksComponent implements OnInit {
 
-  books: Observable<Book[]>;
+  books: Book[] = [];
 
-  // books: Array<any>;
+   
 
   constructor(private dialog: MatDialog, private bookService: BooksService) {}
 
@@ -32,22 +32,27 @@ export class BooksComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.reloadData();
+    // this.reloadData();
+    this.bookService.getAll().subscribe(
+      books => this.books = books,
+      error => alert('Erro ao carregar a lista')
+    )
   }
 
-  reloadData() {
-    this.books = this.bookService.getBooksList();
-  }
+  // reloadData() {
+  //   this.books = this.bookService.getBooksList();
+  // }
 
-  deleteBook(id: number) {
-    this.bookService.deleteBook(id)
-      .subscribe(
-        data => {
-          console.log(data);
-          this.reloadData();
-        },
-        error => console.log(error));
-  }
+  deleteBook(book) {
+    const mustDelete = confirm('Deseja realmente excluir este item?');
 
+    if (mustDelete) {
+      this.bookService.delete(book.id).subscribe(
+        () => this.books = this.books.filter(element => element != book),
+        () => alert("Erro ao tentar excluir!")
+      )
+    }
+  }
 
 }
+

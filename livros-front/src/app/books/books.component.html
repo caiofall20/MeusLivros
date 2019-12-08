@@ -15,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <!-- <tr>
         <th scope="row">1</th>
         <td class="w-25">
           <img src="assets/images/image-not-available.jpg" class="img-fluid img-thumbnail" alt="Imagem indisponível">
@@ -34,8 +34,8 @@
             </button>
           </div>
         </td>
-      </tr>
-      <!-- <tr *ngFor="let book of books | async">
+      </tr> -->
+      <tr *ngFor="let book of books">
         <th scope="row">1</th>
         <td class="w-25">
           <img src="assets/images/image-not-available.jpg" class="img-fluid img-thumbnail" alt="Imagem indisponível">
@@ -54,7 +54,7 @@
             </button>
           </div>
         </td>
-      </tr> -->
+      </tr>
     </tbody>
   </table>
   <app-footer></app-footer>
