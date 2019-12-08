@@ -13,40 +13,64 @@ export class BooksService {
 
   constructor(private http: HttpClient) { }
 
-  // public getAll(): Observable<Book> {
-  //   return this.http.get(this.apiPath).pipe(
-  //     // catchError(this.handleError),
-  //     // map(this.jsonDataToCategories)
-  //   )
-  // }
+   public getAll(): Observable<Book[]> {
+     return this.http.get(this.apiPath).pipe(
+        catchError(this.handleError),
+   map(this.jsonDataToBooks)
+     )
+   }
 
-  // public list() {
-  //   return this.http.get<Array<any>>(this.apiPath);
-  // }
+   public list() {
+     return this.http.get<Array<any>>(this.apiPath);
+   }
 
 
-  // public getTitle(): Observable<Book> {
-  //   return this.http.get('');
-  // }
+   public getTitle(): Observable<Book> {
+   return this.http.get('');
+   }
 
-  getBook(id: number): Observable<Object> {
+  getBook(id: number): Observable<Book> {
     return this.http.get(`${this.apiPath}/${id}`);
   }
 
-  createBook(book: Object): Observable<Object> {
-    return this.http.post(`${this.apiPath}`, book);
+  create(book: Book): Observable<Book> {
+    return this.http.post(this.apiPath, book).pipe(
+      catchError(this.handleError),
+      map(this.jsonDataToBook)
+    )
   }
 
-  updateBook(id: number, value: any): Observable<Object> {
+  updateBook(id: number, value: any): Observable<Book> {
     return this.http.put(`${this.apiPath}/${id}`, value);
   }
 
-  deleteBook(id: number): Observable<any> {
-    return this.http.delete(`${this.apiPath}/${id}`, { responseType: 'text' });
+  delete(id: number): Observable<any> {
+    const url = `${this.apiPath}/${id}`;
+    return this.http.delete(url).pipe(
+      catchError(this.handleError),
+      map(() => null)
+    )
   }
 
   getBooksList(): Observable<any> {
     return this.http.get(`${this.apiPath}`);
+  }
+
+  // PRIVATE METHODS
+
+  private jsonDataToBooks(jsonData: any[]): Book[] {
+    const books: Book[] = [];
+    jsonData.forEach(element => books.push(element as Book));
+    return books;
+  }
+
+  private jsonDataToBook(jsonData: any): Book {
+    return jsonData as Book;
+  }
+
+  private handleError(error: any): Observable<any> {
+    console.log("ERRO NA REQUISIÇÃO => ", error);
+    return throwError(error);
   }
 
 
