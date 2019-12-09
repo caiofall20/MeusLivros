@@ -42,7 +42,7 @@ export class BooksComponent implements OnInit {
     // this.reloadData();
     this.bookService.getAll().subscribe(
       books => this.books = books,
-      error => alert('Erro ao carregar a lista')
+      // error => alert('Erro ao carregar a lista')
     )
   }
 
