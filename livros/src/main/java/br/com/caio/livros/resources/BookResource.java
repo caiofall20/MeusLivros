@@ -47,7 +47,7 @@ public class BookResource {
 	}
 	@CrossOrigin(origins = {"http://localhost:8100","http://localhost:8080"})
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<Void> delete(@RequestBody Book obj,@PathVariable Long id) {
+	public ResponseEntity<Void> delete( Book obj,@PathVariable Long id) {
 		service.delete(obj);
 		return ResponseEntity.noContent().build();
 
