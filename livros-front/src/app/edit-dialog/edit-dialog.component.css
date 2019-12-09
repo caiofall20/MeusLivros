@@ -1,0 +1,71 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.example-form {
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+}
+
+button:disabled {
+    background-color: #243a66!important;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+
+.btn-cadastrar {
+    background-color: #182848 
+}
+
+.btns {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    margin: 1%;
+}
+
+.title-box {
+    clip-path: polygon( 0% 0%, 100% 0%, 100% 20%, 98% 100%, 0% 100% );
+    background-color: #efefef;
+}
+
+.title-box p {
+    padding: 0.5%;
+    font-weight: bold;
+    color: #2d2d2d;
+}
+
+
+.fas {
+    color: white;
+}
+
+::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple{
+    background-color: #182848 !important;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+    color: #182848 !important;
+}
+

@@ -24,9 +24,9 @@
         <td>{{book.gender}}</td>
         <td>
           <div class="buttons">
-            <button mat-raised-button class="btn " matTooltip="Visualizar" matTooltipPosition="right" (click)="openDialog('dialog')"><i
+            <button mat-raised-button class="btn " matTooltip="Visualizar" matTooltipPosition="right" (click)="openDialog('dialog', book)"><i
                 class="fas fa-search" ></i></button>
-            <button mat-raised-button class=" btn-info" matTooltip="Editar" matTooltipPosition="right" (click)="openDialog('editDialog')"><i
+            <button mat-raised-button class=" btn-info" matTooltip="Editar" matTooltipPosition="right" (click)="openDialog('editDialog', book)"><i
                 class="fas fa-edit" ></i></button>
             <button mat-raised-button class=" btn-danger" matTooltip="Excluir" matTooltipPosition="right"
               (click)="deleteBook(book)"><i class="fas fa-trash-alt"></i>

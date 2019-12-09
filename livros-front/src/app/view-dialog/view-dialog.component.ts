@@ -16,18 +16,29 @@ import { Book } from '../shared/models/book.model';
 export class ViewDialogComponent implements OnInit {
 
 
-  @Input() book: Book;
+  // @Input() public book: Book;
 
 
-  // @Input() books: Book[] = [];
+  public books: Book[] = [];
+  selectBook: Book;
 
   constructor(private dialogRef: MatDialogRef<ViewDialogComponent>) { }
 
   ngOnInit() {
+
+    console.log(this.selectBook);
     // this.bookService.getAll().subscribe(
     //   books => this.books = books,
     //   error => alert('Erro ao carregar a lista')
     // )
+  }
+
+  isReading(): boolean {
+    return this.selectBook.status;
+  }
+
+  isNotReading(): boolean {
+    return !this.selectBook.status;
   }
 
 

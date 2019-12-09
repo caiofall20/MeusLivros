@@ -1,5 +1,5 @@
 <div class="modal-header">
-  <h5 class="modal-title" id="exampleModalLongTitle">oi</h5>
+  <h5 class="modal-title" id="exampleModalLongTitle">{{selectBook?.title}}</h5>
   <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="close()">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -8,7 +8,7 @@
   <div class="image">
     <img src="assets/images/image-not-available.jpg" class="img-fluid img-thumbnail" alt="Imagem indisponível">
   </div>
-<!-- 
+  <!-- 
   <table>
     <tr *ngFor="let book of books let i= index ">
       <td>
@@ -16,59 +16,80 @@
       </td>
       </tr>
   </table> -->
-  <div id="dados-conteudo" *ngIf="book">
+  <div id="dados-conteudo" *ngIf="selectBook">
     <table class="table table-sm table-striped table-responsive">
       <thead>
         <tr>
-          <td><b>Título</b></td>
-          <td>{{book.title}}</td>
+          <td>
+            <b>Título</b>
+          </td>
+          <td>{{selectBook?.title}}</td>
         </tr>
       </thead>
-      <!-- <tbody>
+      <tbody>
         <tr>
-          <td><b>Autor</b></td>
-          <td>{{books.author}}</td>
-        </tr>
-        <tr>
-          <td><b>Gênero</b></td>
-          <td>{{books.gender}}</td>
-        </tr>
-        <tr>
-          <td><b>Editora</b></td>
-          <td>{{books.publish}}</td>
-        </tr>
-        <tr>
-          <td><b>Tipo</b></td>
-          <td>{{books.type}}</td>
-        </tr>
-        <tr>
-          <td><b>Categoria</b></td>
-          <td>{{books.category}}</td>
-        </tr>
-        <tr>
-          <td><b>Número de Páginas</b></td>
-          <td>{{books.pages}}</td>
-        </tr>
-        <tr>
-          <td><b>ISBN</b></td>
-          <td>{{books.isbn}}</td>
-        </tr>
-        <tr>
-          <td><b>Status</b></td>
-          <td>{{books.status}}</td>
+          <td>
+            <b>Autor</b>
+          </td>
+          <td>{{selectBook?.author}}</td>
         </tr>
         <tr>
           <td>
-            <div class="buttons">
-              <button mat-raised-button class=" btn-info" matTooltip="Editar" matTooltipPosition="right"><i
-                  class="fas fa-edit"></i></button>
-              <button mat-raised-button class=" btn-danger" matTooltip="Excluir" matTooltipPosition="right"
-                (click)="deleteBook(book.id)"><i class="fas fa-trash-alt"></i>
-              </button>
-            </div>
+            <b>Gênero</b>
           </td>
+          <td>{{selectBook?.gender}}</td>
         </tr>
-      </tbody> -->
+        <tr>
+          <td>
+            <b>Editora</b>
+          </td>
+          <td>{{selectBook?.publishy_company}}</td>
+        </tr>
+        <tr>
+          <td>
+            <b>Tipo</b>
+          </td>
+          <td>{{selectBook?.type}}</td>
+        </tr>
+        <tr>
+          <td>
+            <b>Categoria</b>
+          </td>
+          <td>{{selectBook?.category}}</td>
+        </tr>
+        <tr>
+          <td>
+            <b>Número de Páginas</b>
+          </td>
+          <td>{{selectBook?.number_pages}}</td>
+        </tr>
+        <tr>
+          <td>
+            <b>ISBN</b>
+          </td>
+          <td>{{selectBook?.isbn}}</td>
+        </tr>
+        <tr *ngIf = "isReading()">
+          <td>
+            <b>Status</b>
+          </td>
+          <td>Lendo Agora</td>
+        </tr>
+        <tr *ngIf = "isNotReading()">
+            <td>
+              <b>Status</b>
+            </td>
+            <td>Não está lendo agora</td>
+          </tr>
+      </tbody>
     </table>
+    <div class="buttons">
+      <button mat-raised-button class=" btn-info" matTooltip="Editar" matTooltipPosition="right">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button mat-raised-button class=" btn-danger" matTooltip="Excluir" matTooltipPosition="right" (click)="deleteBook(book.id)">
+        <i class="fas fa-trash-alt"></i>
+      </button>
+    </div>
+    </div>
   </div>
-</div>

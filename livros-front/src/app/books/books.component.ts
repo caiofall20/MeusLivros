@@ -21,18 +21,22 @@ export class BooksComponent implements OnInit {
 
   constructor(private dialog: MatDialog,private editDialog: MatDialog,private bookService: BooksService) {}
 
-  openDialog(modal: string) {
+  openDialog(modal: string, selectBook) {
       const dialogConfig = new MatDialogConfig();
 
       dialogConfig.disableClose = true;
       dialogConfig.autoFocus = true;
       
       if (modal == 'dialog') {
-        this.dialog.open(ViewDialogComponent, dialogConfig); 
+        let modalComponent = this.dialog.open(ViewDialogComponent, dialogConfig); 
+        modalComponent.componentInstance.selectBook = selectBook;
       }
       else if (modal == 'editDialog')  {
-        this.dialog.open(EditDialogComponent, dialogConfig);
+        let modalComponent = this.dialog.open(EditDialogComponent, dialogConfig);
+        modalComponent.componentInstance.selectBook = selectBook;
     }
+
+    
     console.log("Opa, to entrando na função!");
   
   }

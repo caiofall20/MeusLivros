@@ -9,6 +9,8 @@ import { Book } from '../models/book.model';
 })
 export class BooksService {
 
+  observable: Observable<any>;
+
   private apiPath: string = "http://localhost:8080/livros";
 
   constructor(private http: HttpClient) { }
@@ -23,6 +25,13 @@ export class BooksService {
    public list() {
      return this.http.get<Array<any>>(this.apiPath);
    }
+
+
+  //  public save(book:Book) {
+  //    this.observable.pipe(
+  //     publish(book),
+  //    );
+  //  }
 
 
    public getTitle(): Observable<Book> {

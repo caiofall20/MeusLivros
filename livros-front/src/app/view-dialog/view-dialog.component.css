@@ -1,6 +1,14 @@
 .image {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 10rem;
+    width: 100%;
+    justify-content: center;
+    padding: 10%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 42%;
+    float: right;
 }
