@@ -27,7 +27,7 @@ export class AddBookComponent implements OnInit {
   }
 
   createForm(book: Book) {
-    this.formBook = this.formBuilder.group({
+    return this.formBook = this.formBuilder.group({
       title: [book.title],
       author: [book.author],
       publish: [book.publish],
@@ -48,7 +48,7 @@ export class AddBookComponent implements OnInit {
 
   save() {
     console.log(this.formBook.value);
-    this.bookService.create(this.book)
+    this.bookService.create(this.formBook.value)
       .subscribe(data => console.log(data), error => console.log(error));
     this.book = new Book();
     this.formBook.reset(new Book());
