@@ -18,6 +18,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { ViewDialogComponent } from './view-dialog/view-dialog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     AddBookComponent,
     FooterComponent,
     LoginComponent,
-    ViewDialogComponent
+    ViewDialogComponent,
+    EditDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   
-  entryComponents: [ViewDialogComponent],
+  entryComponents: [ViewDialogComponent, EditDialogComponent],
   providers: [AuthService],
   bootstrap: [AppComponent],
   

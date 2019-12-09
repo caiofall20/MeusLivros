@@ -20,6 +20,10 @@
     padding-right: 8px;
 }
 
+button:disabled {
+    background-color: #243a66!important;
+}
+
 .example-container {
     display: flex;
     flex-direction: column;

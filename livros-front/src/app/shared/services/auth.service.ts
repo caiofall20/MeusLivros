@@ -16,7 +16,7 @@ export class AuthService {
     if (user.name === "carol" && user.password === "123456"){
       this.userAuthenticated = true;
 
-      this.router.navigate(['/'])
+      this.router.navigate(['/home'])
     }
     else {
       this.userAuthenticated = false;

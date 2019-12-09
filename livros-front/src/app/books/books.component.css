@@ -28,14 +28,13 @@
 
 
 .img-thumbnail {
-    width: 70%;
+    width: 40%;
 }
 
-
-
 .table {
-    max-width: 100%;
-    padding: 2% 10%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   
   h4 {
@@ -49,6 +48,13 @@
 
   @media (max-width: 600px) {
     .table {
-        padding: 2% 2%;
-      } 
+        margin-left: 0%!important;
+        margin-right: 0%!important;
+    }
+    
+    .img {
+        display: none;
+    }
   }
+
+
