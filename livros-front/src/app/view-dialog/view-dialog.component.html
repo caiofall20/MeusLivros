@@ -1,5 +1,5 @@
 <div class="modal-header">
-  <h5 class="modal-title" id="exampleModalLongTitle">Título do livro</h5>
+  <h5 class="modal-title" id="exampleModalLongTitle">oi</h5>
   <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="close()">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -8,8 +8,15 @@
   <div class="image">
     <img src="assets/images/image-not-available.jpg" class="img-fluid img-thumbnail" alt="Imagem indisponível">
   </div>
-  <div  id="dados-conteudo">
-      <!-- *ngIf="book" -->
+<!-- 
+  <table>
+    <tr *ngFor="let book of books let i= index ">
+      <td>
+        {{book.title}}
+      </td>
+      </tr>
+  </table> -->
+  <div id="dados-conteudo" *ngIf="book">
     <table class="table table-sm table-striped table-responsive">
       <thead>
         <tr>
@@ -17,38 +24,38 @@
           <td>{{book.title}}</td>
         </tr>
       </thead>
-      <tbody>
+      <!-- <tbody>
         <tr>
           <td><b>Autor</b></td>
-          <td>{{book.author}}</td>
+          <td>{{books.author}}</td>
         </tr>
         <tr>
           <td><b>Gênero</b></td>
-          <td>{{book.gender}}</td>
+          <td>{{books.gender}}</td>
         </tr>
         <tr>
           <td><b>Editora</b></td>
-          <td>{{book.publish}}</td>
+          <td>{{books.publish}}</td>
         </tr>
         <tr>
           <td><b>Tipo</b></td>
-          <td>{{book.type}}</td>
+          <td>{{books.type}}</td>
         </tr>
         <tr>
           <td><b>Categoria</b></td>
-          <td>{{book.category}}</td>
+          <td>{{books.category}}</td>
         </tr>
         <tr>
           <td><b>Número de Páginas</b></td>
-          <td>{{book.pages}}</td>
+          <td>{{books.pages}}</td>
         </tr>
         <tr>
           <td><b>ISBN</b></td>
-          <td>{{book.isbn}}</td>
+          <td>{{books.isbn}}</td>
         </tr>
         <tr>
           <td><b>Status</b></td>
-          <td>{{book.status}}</td>
+          <td>{{books.status}}</td>
         </tr>
         <tr>
           <td>
@@ -61,7 +68,7 @@
             </div>
           </td>
         </tr>
-      </tbody>
+      </tbody> -->
     </table>
   </div>
 </div>

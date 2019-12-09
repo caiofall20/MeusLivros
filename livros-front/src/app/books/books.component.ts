@@ -17,6 +17,7 @@ import { EditDialogComponent } from '../edit-dialog/edit-dialog.component';
 export class BooksComponent implements OnInit {
 
   books: Book[] = [];
+  selectBook: Book;
 
   constructor(private dialog: MatDialog,private editDialog: MatDialog,private bookService: BooksService) {}
 
@@ -42,7 +43,7 @@ export class BooksComponent implements OnInit {
     // this.reloadData();
     this.bookService.getAll().subscribe(
       books => this.books = books,
-      // error => alert('Erro ao carregar a lista')
+      error => alert('Erro ao carregar a lista')
     )
   }
 
@@ -59,6 +60,10 @@ export class BooksComponent implements OnInit {
         () => alert("Erro ao tentar excluir!")
       )
     }
+  }
+
+  onSelect(books: Book): void {
+    this.selectBook = books;
   }
 
 }

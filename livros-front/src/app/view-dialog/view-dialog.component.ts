@@ -1,7 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ErrorHandler } from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 // import { BooksService } from '../shared/services/books.service';
 // import { BooksComponent } from '../books/books.component';
+import { BooksService } from '../shared/services/books.service';
+import { BooksComponent } from '../books/books.component';
+import { Observable } from 'rxjs';
 import { Book } from '../shared/models/book.model';
 
 
@@ -12,12 +15,22 @@ import { Book } from '../shared/models/book.model';
 })
 export class ViewDialogComponent implements OnInit {
 
+
   @Input() book: Book;
+
+
+  // @Input() books: Book[] = [];
 
   constructor(private dialogRef: MatDialogRef<ViewDialogComponent>) { }
 
   ngOnInit() {
+    // this.bookService.getAll().subscribe(
+    //   books => this.books = books,
+    //   error => alert('Erro ao carregar a lista')
+    // )
   }
+
+
 
   close() {
     this.dialogRef.close();

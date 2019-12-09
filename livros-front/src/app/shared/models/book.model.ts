@@ -3,11 +3,11 @@ export class Book {
         public id?:number,
         public title?: string,
         public author?: string,
-        public publish?: string,
+        public publishy_company?: string,
         public gender?: string,
         public type?: string ,
         public category?: string,
-        public pages?: Number,
+        public number_pages?: number,
         public isbn?: number,
         public status?: boolean
        

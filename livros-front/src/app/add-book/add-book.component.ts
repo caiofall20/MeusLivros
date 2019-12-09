@@ -23,18 +23,18 @@ export class AddBookComponent implements OnInit {
   ngOnInit() {
 
     this.createForm(new Book());
-
+    
   }
 
   createForm(book: Book) {
     return this.formBook = this.formBuilder.group({
       title: [book.title],
       author: [book.author],
-      publish: [book.publish],
+      publishy_company: [book.publishy_company],
       gender: [book.gender],
       type: [book.type],
       category: [book.category],
-      pages: [book.pages],
+      number_pages: [book.number_pages],
       isbn: [book.isbn],
       status: [book.status]
     })
@@ -52,6 +52,7 @@ export class AddBookComponent implements OnInit {
       .subscribe(data => console.log(data), error => console.log(error));
     this.book = new Book();
     this.formBook.reset(new Book());
+    alert('Cadastrado com Sucesso');
   }
 
   onSubmit() {
